@@ -24,7 +24,6 @@ var specialCharacters = [
   '_',
   '.'
 ];
-//Joined special characters
 const newSpecialCharacters= specialCharacters.join("");
 //console.log(newSpecialCharacters);
 //Output='@%+\/'!#$^?:,)(}{][~-_.'
@@ -101,7 +100,7 @@ const newUpperCase=upperCasedCharacters.join("");
 // Function to prompt user for password options
 function getPasswordOptions()
 //The use has to be prompted to choose password length (8-128 characters)
- const length = prompt("What is your password length of between 8 and 128 characters?");
+//const length = prompt("Enter password length of between 8 and 128 characters: ");
 {
 
 
@@ -109,12 +108,21 @@ function getPasswordOptions()
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+constrandomIndex=Math.floor(Math.random()*arr.length);
+return arr[randomIndex];
 }
+
 
 // Function to generate password with user input
 function generatePassword() {
-
+getPasswordOptions();
+const allCharacters=newSpecialCharacters + newNumbers + newLowercase + newUpperCase;
+let password='';
+for (let i=0; i< length; i++) {
+  const randomChar=getRandom(allCharacters);
+  password +=randomChar;
+}
+return password;
 }
 
 // Get references to the #generate element
@@ -129,4 +137,5 @@ function writePassword() {
 }
 
 // Add event listener to generate button
+var generateBtn =document.querySelector('#generate');
 generateBtn.addEventListener('click', writePassword);
