@@ -114,23 +114,37 @@ return arr[randomIndex];
 
 
 // Function to generate password with user input
-function generatePassword() {
-getPasswordOptions();
-const allCharacters=newSpecialCharacters + newNumbers + newLowercase + newUpperCase;
-let password='';
-for (let i=0; i< length; i++) {
-  const randomChar=getRandom(allCharacters);
-  password +=randomChar;
+function generatePassword(options) {
+var allCharacters ="";
+if (options.includeLowercase) {
+  allCharacters +=lowerCasedCharacters;
+}
+if (options.includeUppercase) {
+  allCharacters +=upperCasedCharacters;
+}
+if(options.includeNumeric) {
+  allCharacters +=numericCharacters;
+}
+if (options.includeSpecial) {
+  allCharacters +=specialCharacters;
+}
+
+var password ="";
+for (var i=0; i< options.length; i++) {
+var randomChar=allCharacters.charAt(Math.floor(Math.random() * allCharacters.length);
+);
+password +=randomChar;
 }
 return password;
 }
 
 // Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
+//var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var options= getPasswordOptions();
+  var password = generatePassword(options);
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
