@@ -99,7 +99,11 @@ const newUpperCase=upperCasedCharacters.join("");
 //console.log(newUpperCase);
 //Output='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 // Function to prompt user for password options
-function getPasswordOptions() {
+function getPasswordOptions()
+//The use has to be prompted to choose password length (8-128 characters)
+ const length = prompt("What is your password length of between 8 and 128 characters?");
+{
+
 
 }
 
