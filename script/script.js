@@ -61,7 +61,7 @@ var lowerCasedCharacters = [
   'y',
   'z'
 ];
-//Removing comas and spaces from lowercase characters
+//Removing comas and spaces from lowercase characters in array.
 const newLowerCase =lowerCasedCharacters.join("");
 //console.log(newLowerCase); Output='abcdefghijklmnopqrstuvwxyz'
 // Array of uppercase characters to be included in password

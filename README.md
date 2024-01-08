@@ -24,7 +24,9 @@ No installation is required.
 ## Usage 
 A screenshot of the work is shown here:
 
-![A screenshot of the project is here:](./assets/05-javascript-challenge-demo.png)
+![A screenshot of the application that requests the length of password:](./assets/password-length.png)
+![A screenshot of a prompt:](./assets/lowercase-prompt.png)
+![A screenshot of the project is here:](./assets/password-generator.png)
 ```
 
 
