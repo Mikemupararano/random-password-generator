@@ -117,8 +117,8 @@ if (options.includeSpecial) {
 
 var password ="";
 for (var i=0; i< options.length; i++) {
-var randomChar=allCharacters.charAt(Math.floor(Math.random() * allCharacters.length);
-);
+var randomChar=allCharacters.charAt(Math.floor(Math.random() * allCharacters.length));
+
 password +=randomChar;
 }
 return password;
@@ -138,7 +138,7 @@ function writePassword() {
 
 // Add event listener to generate button
 var generateBtn =document.querySelector('#generate');
-generateBtn.addEventListener('click', writePassword);*/
+generateBtn.addEventListener('click', writePassword);
 
 document.addEventListener("DOMContentLoaded", function () {
   // Array of character sets
@@ -178,15 +178,15 @@ document.addEventListener("DOMContentLoaded", function () {
       includeNumeric = confirm("Include numeric characters?");
       includeSpecial = confirm("Include special characters?");
     }
-
+    //Used shorthand notation and replaced longer code.
     return {
       length: parseInt(length),
-      includeLowercase: includeLowercase,
-      includeUppercase: includeUppercase,
-      includeNumeric: includeNumeric,
-      includeSpecial: includeSpecial,
+      includeLowercase,
+      includeUppercase,
+      includeNumeric,
+      includeSpecial,
     };
-  }
+    }
 
   function generatePassword(options) {
     var allCharacters = "";
