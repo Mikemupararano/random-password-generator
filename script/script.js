@@ -1,4 +1,4 @@
-// Array of special characters to be included in password
+// Array of special characters to be included in password that I have modified later by removing the commas.
 var specialCharacters = [
   '@',
   '%',
@@ -27,12 +27,12 @@ var specialCharacters = [
 var newSpecialCharacters= specialCharacters.join("");
 //console.log(newSpecialCharacters);
 //Output='@%+\/'!#$^?:,)(}{][~-_.'
-// Array of numeric characters to be included in password
+// Array of numeric characters to be included in password. I removed commas.
 var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 //Removing comas between elements
 const newNumbers=numericCharacters.join("");
 //console.log(newNumbers) output '0123456789'
-// Array of lowercase characters to be included in password
+// Array of lowercase characters to be included in password and I have removed commas.
 var lowerCasedCharacters = [
   'a',
   'b',
@@ -64,7 +64,7 @@ var lowerCasedCharacters = [
 //Removing comas and spaces from lowercase characters in array.
 const newLowerCase =lowerCasedCharacters.join("");
 //console.log(newLowerCase); Output='abcdefghijklmnopqrstuvwxyz'
-// Array of uppercase characters to be included in password
+// Array of uppercase characters to be included in password and I removed commas later.
 var upperCasedCharacters = [
   'A',
   'B',
@@ -100,23 +100,23 @@ var newUpperCase=upperCasedCharacters.join("");
 //console.log(newUpperCase);
 
 // Function to generate password with user input
-function generatePassword(options) {
+function generatePassword(choices) {
 var allCharacters ="";
-if (options.includeLowercase) {
+if (choices.includeLowercase) {
   allCharacters +=lowerCasedCharacters;
 }
-if (options.includeUppercase) {
+if (choices.includeUppercase) {
   allCharacters +=upperCasedCharacters;
 }
-if(options.includeNumeric) {
+if(choices.includeNumeric) {
   allCharacters +=numericCharacters;
 }
-if (options.includeSpecial) {
+if (choices.includeSpecial) {
   allCharacters +=specialCharacters;
 }
 
 var password ="";
-for (var i=0; i< options.length; i++) {
+for (var i=0; i< choices.length; i++) {
 var randomChar=allCharacters.charAt(Math.floor(Math.random() * allCharacters.length));
 
 password +=randomChar;
@@ -124,35 +124,31 @@ password +=randomChar;
 return password;
 }
 
-// Get references to the #generate element
-
-
-// Write password to the #password input
+// Code for writing password to the #password input
 function writePassword() {
-  var options= getPasswordOptions();
-  var password = generatePassword(options);
+  var choices= getPasswordOptions();
+  var password = generatePassword(choices);
   var passwordText = document.querySelector('#password');
-
   passwordText.value = password;
 }
 
-// Add event listener to generate button
+// Code for adding event listener to generate button
 var generateBtn =document.querySelector('#generate');
 generateBtn.addEventListener('click', writePassword);
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Array of character sets
+  // Arrays derived from joining characters in stater code
   var specialCharacters =newSpecialCharacters; // output="@%+\\/'!#$^?:,)(}{][~-_.";
   var numericCharacters =newNumbers; //output="0123456789";
   var lowerCasedCharacters = newLowerCase; //output="abcdefghijklmnopqrstuvwxyz";
   var upperCasedCharacters =newUpperCase ; //output="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
+//Code to prompt user to type the desired length of their password.
   function getPasswordOptions() {
     var length = prompt(
       "Enter the password length (between 8 and 128 characters):"
     );
     
-    // Validate the length
+    // if the length is less than 8 characters, is not a number or one of the desired characters, a user is prompted to correct the anomaly 
     while (length < 8 || length > 128 || isNaN(length)) {
       alert("Please enter a valid password length between 8 and 128.");
       length = prompt(
@@ -165,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var includeNumeric = confirm("Include numeric characters?");
     var includeSpecial = confirm("Include special characters?");
 
-    // Validate that at least one character type is selected
+    // This code checks and makes sure that at least one character type is selected
     while (
       !includeLowercase &&
       !includeUppercase &&
@@ -187,24 +183,24 @@ document.addEventListener("DOMContentLoaded", function () {
       includeSpecial,
     };
     }
-
-  function generatePassword(options) {
+//generate the password:
+  function generatePassword(choices) {
     var allCharacters = "";
-    if (options.includeLowercase) {
+    if (choices.includeLowercase) {
       allCharacters += lowerCasedCharacters;
     }
-    if (options.includeUppercase) {
+    if (choices.includeUppercase) {
       allCharacters += upperCasedCharacters;
     }
-    if (options.includeNumeric) {
+    if (choices.includeNumeric) {
       allCharacters += numericCharacters;
     }
-    if (options.includeSpecial) {
+    if (choices.includeSpecial) {
       allCharacters += specialCharacters;
     }
 
     var password = "";
-    for (var i = 0; i < options.length; i++) {
+    for (var i = 0; i < choices.length; i++) {
       var randomChar = allCharacters.charAt(
         Math.floor(Math.random() * allCharacters.length)
       );
@@ -215,8 +211,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function writePassword() {
-    var options = getPasswordOptions();
-    var password = generatePassword(options);
+    var choices = getPasswordOptions();
+    var password = generatePassword(choices);
 
     var passwordText = document.querySelector("#password");
     passwordText.value = password;

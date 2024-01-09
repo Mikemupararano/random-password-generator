@@ -11,7 +11,7 @@ Many customers use dictionary-based password generators that can be easily guess
 I have used HTML, CSS and JavaScript to design a web application that generates secure and random passwords that many organisations could benefit from.
 
 The project is located at the following link:
-https://mikemupararano.github.io/Console-Finances/
+
 
 
 ## Table of Contents (Optional)
@@ -23,7 +23,7 @@ No installation is required.
 
 ## Usage 
 A screenshot of the work is shown here:
-
+![A screenshot of the prototype that was used to inform how this work should be completed is here:](./assets/prototype.png)
 ![A screenshot of the application that requests the length of password:](./assets/password-length.png)
 ![A screenshot of a prompt:](./assets/lowercase-prompt.png)
 ![A screenshot of the project is here:](./assets/password-generator.png)
@@ -31,6 +31,8 @@ A screenshot of the work is shown here:
 
 
 ## Credits
+A few days before completing this task, I built a prototype and published it on my Github pages. The prototype that informed this work is located on this github repository: https://github.com/Mikemupararano/password-generator-prototype.
+The published work is here: https://mikemupararano.github.io/password-generator-prototype/.
 To complete this task, I have used for example the following:
 How to make a password generator in javaScript and why is one required: https://arhaanali.medium.com/how-to-make-a-password-generator-in-javascript-97a3de9a35d8
 https://www.freecodecamp.org/news/basics-of-data-analysis-with-javascript/.
