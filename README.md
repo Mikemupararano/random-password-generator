@@ -38,9 +38,9 @@ How to make a password generator in javaScript and why is one required: https://
 https://www.freecodecamp.org/news/basics-of-data-analysis-with-javascript/.
 The website has examples on how to find the length of an array, determine the sum and loop through the array. 
 The following online videos also helped me to write the code for this work:
-https://www.youtube.com/watch?v=duNmhKgtcsI
+Eaxmple of password generator-https://www.youtube.com/watch?v=duNmhKgtcsI
 https://www.youtube.com/watch?v=XH7CzSZ-9gY
-Traversy Media: https://www.youtube.com/watch?v=duNmhKgtcsI&t=750s
+Traversy Media for example of password generator: https://www.youtube.com/watch?v=duNmhKgtcsI&t=750s
 ## License
 Readers should refer to the MIT License in the repository.
 
