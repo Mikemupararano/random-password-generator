@@ -162,12 +162,17 @@ document.addEventListener("DOMContentLoaded", function () {
     var includeSpecial = confirm("Include special characters?");
 
     // This code checks and makes sure that at least one character type is selected
-    while (
+    while not any([includeLowercase, includeUppercase, includeNumeric, includeSpecial]):
+  
+    //This loop will continue as long as none of the boolean variables is True
+
+    /*while (
       !includeLowercase &&
       !includeUppercase &&
       !includeNumeric &&
       !includeSpecial
-    ) {
+    )*/
+     {
       alert("At least one character type must be selected.");
       includeLowercase = confirm("Include lowercase characters?");
       includeUppercase = confirm("Include uppercase characters?");
