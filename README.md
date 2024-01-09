@@ -32,12 +32,15 @@ A screenshot of the work is shown here:
 
 ## Credits
 A few days before completing this task, I built a prototype and published it on my Github pages. The prototype that informed this work is located on this github repository: https://github.com/Mikemupararano/password-generator-prototype.
-The published work is here: https://mikemupararano.github.io/password-generator-prototype/.
+The published work is  for the prototype is here: https://mikemupararano.github.io/password-generator-prototype/.
 To complete this task, I have used for example the following:
 How to make a password generator in javaScript and why is one required: https://arhaanali.medium.com/how-to-make-a-password-generator-in-javascript-97a3de9a35d8
 https://www.freecodecamp.org/news/basics-of-data-analysis-with-javascript/.
 The website has examples on how to find the length of an array, determine the sum and loop through the array. 
-
+The following online videos also helped me to write the code for this work:
+https://www.youtube.com/watch?v=duNmhKgtcsI
+https://www.youtube.com/watch?v=XH7CzSZ-9gY
+Traversy Media: https://www.youtube.com/watch?v=duNmhKgtcsI&t=750s
 ## License
 Readers should refer to the MIT License in the repository.
 
@@ -53,6 +56,7 @@ N/A
 
 As indicated in the description above, I have not included password storage facilities in this work. I would encourage collaboration to improve this web application so that it can store the passwords that are generated. Here is the link for any collaborations on this important matter:
 https://github.com/Mikemupararano/random-password-generator
+The work is published on: https://mikemupararano.github.io/random-password-generator/
 
 ## Tests
 
