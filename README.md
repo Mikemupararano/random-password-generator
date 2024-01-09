@@ -22,7 +22,7 @@ N/A
 No installation is required.
 
 ## Usage 
-A screenshot of the work is shown here:
+A screenshot of the work, including the prototype that I used to build this current work is shown here:
 ![A screenshot of the prototype that was used to inform how this work should be completed is here:](./assets/prototype.png)
 ![A screenshot of the application that requests the length of password:](./assets/password-length.png)
 ![A screenshot of a prompt:](./assets/lowercase-prompt.png)
